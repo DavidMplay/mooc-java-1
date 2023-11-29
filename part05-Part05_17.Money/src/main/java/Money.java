@@ -40,14 +40,17 @@ public class Money {
     public boolean lessThan(Money compared) {
         if (this.euros < compared.euros) {
             return true;
-        } else if (this.cents < compared.cents) {
-            return true;
-        } else {
-            return false;
+        } else if (this.euros == compared.euros) {
+            if (this.cents() < compared.cents()) {
+                return true;
+            }
         }
+        return false;
+
     }
 
-    public Money minus(Money decreaser) {
+
+public Money minus(Money decreaser) {
 
         int subtractEuros = this.euros - decreaser.euros;
         int subtractCents = this.cents - decreaser.cents;
