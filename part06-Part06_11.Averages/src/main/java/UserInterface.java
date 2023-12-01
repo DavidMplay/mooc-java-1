@@ -46,6 +46,8 @@ public class UserInterface {
 
             grade = grade - 1;
         }
+        System.out.println("The average of points: " + register.averageOfPoints());
+        System.out.println("The average of grades: " + register.averageOfGrades());
         
     }
 
@@ -55,4 +57,5 @@ public class UserInterface {
             stars--;
         }
     }
+
 }
